@@ -21,7 +21,7 @@ if (estoque >= quantidade) {
      statusPedido = "Pedido não pode ser finalizado por falta de estoque"
 }
 
-// desconto
+// valor desconto
 
 if (subtotal >= 1000) {
      descontoPercentual = 10

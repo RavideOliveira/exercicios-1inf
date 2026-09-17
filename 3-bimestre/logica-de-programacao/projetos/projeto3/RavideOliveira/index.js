@@ -1,24 +1,27 @@
 const nome = "Rávide Oliveira"
 const idade = 16
 let categoria = "comum"
-const possuiCarteirinha = "true"
-let suspenso = "false"
+const possuiCarteirinha = true
+let suspenso = false
 const valorReserva = 10
 const valorPago = 10
 const troco = valorPago - valorReserva
 
 // idade
 
+let idadeStatus = "menor de idade"
 if (idade >= 18) {
     console.log("Idade permitida")
+    idadeStatus = "maior de idade"
 } else {
     console.log("Idade não permitida")
+    idadeStatus = "menor de idade"
 }
 
 // categoria 
 
 let nivelAcesso = "comum"
-if (categoria === "bibliotecario" || "coordenador") {
+if (categoria === "bibliotecario" || categoria === "coordenador") {
     console.log("Acesso administrativo liberado")
     nivelAcesso = "bibliotecario/coordenador"
 } else {
@@ -29,7 +32,7 @@ if (categoria === "bibliotecario" || "coordenador") {
 // liberação de acesso
 
 let acessoStatus = "negado"
-if (idade >= 18 && possuiCarteirinha && suspenso !== "false") {
+if (idade >= 18 && possuiCarteirinha && !suspenso) {
     acessoStatus = "Acesso à sala liberado"
 } else {
     acessoStatus = "Acesso à sala negado"
@@ -46,7 +49,7 @@ if (valorPago >= valorReserva) {
 
 // situação final
 let statusReserva = "negado"
-if (acessoStatus === true &&  pagamentoStatus === true) {
+if (acessoStatus === "Acesso à sala liberado" &&  pagamentoStatus === "Pagamento aprovado") {
     statusReserva = "Reserva da sala confirmada"
 } else {
     statusReserva = "Reserva da sala não confirmada"

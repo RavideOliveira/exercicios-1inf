@@ -11,10 +11,8 @@ const troco = valorPago - valorReserva
 
 let idadeStatus = "menor de idade"
 if (idade >= 18) {
-    console.log("Idade permitida")
     idadeStatus = "maior de idade"
 } else {
-    console.log("Idade não permitida")
     idadeStatus = "menor de idade"
 }
 
@@ -22,10 +20,8 @@ if (idade >= 18) {
 
 let nivelAcesso = "comum"
 if (categoria === "bibliotecario" || categoria === "coordenador") {
-    console.log("Acesso administrativo liberado")
     nivelAcesso = "bibliotecario/coordenador"
 } else {
-    console.log("Acesso comum")
     nivelAcesso = "comum"
 }
 
@@ -55,7 +51,7 @@ if (acessoStatus === "Acesso à sala liberado" &&  pagamentoStatus === "Pagament
     statusReserva = "Reserva da sala não confirmada"
 }
 
-const resumo = `O cliente ${nome} pagou R$${valorPago} para alugar uma reserva que custou R$${valorReserva}, sua categoria era ${categoria} então recebeu um acesso ${nivelAcesso}, seu troco foi de R$${troco}, em resumo, ${acessoStatus}, ${pagamentoStatus}, ${statusReserva} `
+const resumo = `O cliente ${nome}, que tem ${idade} anos, e possui carteirinha (${possuiCarteirinha}) pagou R$${valorPago} para alugar uma reserva que custou R$${valorReserva}, sua categoria era ${categoria} então recebeu um acesso ${nivelAcesso}, e foi suspenso (${suspenso}) seu troco foi de R$${troco}, em resumo, ${acessoStatus}, ${pagamentoStatus}, ${statusReserva} `
 
 
 module.exports = {

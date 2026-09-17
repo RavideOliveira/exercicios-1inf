@@ -9,11 +9,11 @@ const troco = valorPago - valorReserva
 
 // idade
 
-let idadeStatus = "menor de idade"
+let idadeStatus = "Idade não permitida"
 if (idade >= 18) {
-    idadeStatus = "maior de idade"
+    idadeStatus = "Idade permitida"
 } else {
-    idadeStatus = "menor de idade"
+    idadeStatus = "Idade não permitida"
 }
 
 // categoria 
@@ -22,7 +22,7 @@ let nivelAcesso = "comum"
 if (categoria === "bibliotecario" || categoria === "coordenador") {
     nivelAcesso = "bibliotecario/coordenador"
 } else {
-    nivelAcesso = "comum"
+    nivelAcesso = "Acesso comum"
 }
 
 // liberação de acesso

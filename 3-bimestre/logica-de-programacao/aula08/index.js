@@ -1,8 +1,8 @@
 // CRIE SUA SOLUÇÃO ABAIXO ================
 
-
-
-
+const nome = "Carlos"
+const idade = 17
+const cidade = "Fortaleza"
 
 
 // === FIM DO CÓDIGO =======================

@@ -18,12 +18,12 @@ while (producaoFinal < meta) {
 //Caixas para embalar
 
 let caixasNecessarias = 0
-let restante = 0
+let restante = producaoFinal
 
 do {
     caixasNecessarias++
     restante -= pecasPorCaixa
-} while (restante < 0)
+} while (restante > 0)
 
 //Situação da meta
 
